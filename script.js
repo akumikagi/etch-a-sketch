@@ -16,7 +16,7 @@ function initialSet() {
     square.className = "square";
 
     square.addEventListener("click", () => {
-      square.style.backgroundColor = "green";
+      square.style.backgroundColor = "cyan";
     });
     square.addEventListener("contextmenu", (e) => {
       e.preventDefault();
@@ -49,7 +49,7 @@ function userSet() {
     square.className = "square";
 
     square.addEventListener("click", () => {
-      square.style.backgroundColor = "green";
+      square.style.backgroundColor = "cyan";
     });
     square.addEventListener("contextmenu", (e) => {
       e.preventDefault();
