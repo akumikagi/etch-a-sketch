@@ -1,0 +1,37 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Segoe UI', 'Noto Sans', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  border: 1px solid #ffffff;
+  width: 20px;
+  height: 20px;
+}
+
+.canvas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 352px;
+  height: 352px;
+}
+
+.square:hover {
+  background-color: #ff0000;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 4px 12px;
+  margin-bottom: 16px;
+}
