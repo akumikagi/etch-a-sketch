@@ -1,21 +1,12 @@
-//for(let i = 0; i < 94; i++) {
-//  const squareSet = document.createElement("div");
-//  squareSet.className = "column";
-//  for(let i = 0; i < 47; i++) {
-//    const square = document.createElement("div");
-//    square.className = "square";
-//    squareSet.appendChild(square);
-//  }
-//  document.body.appendChild(squareSet);
-//}
 const button = document.querySelector("#reset");
-const container = document.querySelector("#container")
+const container = document.createElement("div")
 
 document.onload = initialSet();
 
 button.addEventListener("click", userSet);
 
 function initialSet() {
+  document.body.appendChild(container);
 
   const squareSet = document.createElement("div");
   squareSet.className = "canvas";
@@ -39,14 +30,14 @@ function initialSet() {
 }
 
 function userSet() {
-  document.body.removeChild(container);
+  container.innerHTML = '';
 
   let gridSize = +prompt("Enter desired grid size (max 40):", "");
-  let canvasSize = 22 * gridSize;
 
   while(gridSize > 40) {
     gridSize = +prompt("LESS THAN 40 PLEASE:", "");
   }
+  let canvasSize = 22 * gridSize;
 
   const squareSet = document.createElement("div");
   squareSet.className = "canvas";
@@ -68,5 +59,5 @@ function userSet() {
     squareSet.appendChild(square);
   }
 
-  document.body.appendChild(squareSet);
+  container.appendChild(squareSet);
 }
